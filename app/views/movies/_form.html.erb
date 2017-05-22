@@ -1,0 +1,35 @@
+<div class="row">
+<div class="col-md-8 col-md-offset-2 well">
+    <%= form_for @movie, html: {multipart: true} do |f| %>
+
+    <div class="field">
+    <%= f.label :movie_name ,"Movie Name:", class: "col-md-2" %>
+    <%= f.text_field :movie_name %>
+    </div>
+    
+
+   <div class="field">
+    <%= f.label :description,"Description:", class: "col-md-2" %>
+    <%= f.text_area :description, rows:4 %>
+    </div>
+  
+    <div class="field">
+    <%= f.label :movie_length,"Movie length:", class: "col-md-2"%>
+    <%= f.text_field :movie_length %>
+    </div>
+
+    <div class="field">
+   <%= f.label :director_name ,"Director:", class: "col-md-2" %>
+    <%= f.text_field :director_name %>
+    </div>
+
+    <div class="field">
+    <%= f.label :rating ,"Rating:",class: "col-md-2" %>
+    <%= f.text_field :rating %>
+    </div>
+
+   <%= f.submit(@movie.new_record? ? 'Create Review': 'Edit Review' , class: "col-md-2 col-md-offset-2 btn btn-success")%>
+    
+     <%end%>
+   </div>
+</div>

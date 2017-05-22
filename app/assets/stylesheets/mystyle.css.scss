@@ -1,0 +1,59 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar{
+	margin-bottom:0px;
+	background-color:#CD5C5C;
+	z-index:9999;
+	border:0;
+	font-size:12px !important;
+	letter-spacing: 4px;
+	border-radius:0;
+	line-height: 1.42857143 !important;
+	font-family:Montserrat,sans-serif;
+	margin-bottom:3px;
+}
+
+.link , .navbar .navbar-brand{
+	color:#fff !important;
+}
+
+
+.navbar-default .navbar-toggle{
+	border-color: transparent;
+	color:#fff !important;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    height: 50%;
+}
+
+.container{
+	width:auto;
+    margin:0;
+    border-radius:0;
+}
+
+h1{
+	font-size:3em;
+	letter-spacing:-2px;
+	margin-bottom:60px;
+    text-align:center;
+}
+
+body{
+	padding-top:5.0%;
+}
+
+input,textarea,select, .uneditable-input{
+	width:40%;
+	border:2 px solid #d2d2d2;
+	border-radius:5px;
+	margin-bottom:7px;
+ }
+
+input{
+	height: auto !important;
+}

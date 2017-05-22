@@ -1,0 +1,22 @@
+<p>
+	<h1><%= @movie.movie_name %></h1>
+    <hr/>
+</p>
+
+<%=link_to 'Edit this Movie',edit_movie_path(@movie),class: " btn btn-primary" %><br/>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-2 ">
+     
+       <div class="well">
+        <P><b>Description:</b>    <%=@movie.description %></P>
+        <P><b>Movie Length:</b>   <%=@movie.movie_length %></P>
+        <p><b>Director:</b>       <%=@movie.director_name %></p>
+        <p><b>Rating:</b>         <%=@movie.rating %></p>
+        </div>
+        <br/>
+        <h5><%=link_to 'Return to Movie List',movies_path, class: "btn btn-warning btn-small" %></h5>
+    </div>
+</div>
+
+    
