@@ -1,6 +1,6 @@
 <div class="row">
 <div class="col-md-8 col-md-offset-2 well">
-    <%= form_for @movie, html: {multipart: true} do |f| %>
+    <%= form_for(@movie, html: {multipart: true}) do |f| %>
 
     <div class="field">
     <%= f.label :movie_name ,"Movie Name:", class: "col-md-2" %>
@@ -27,8 +27,12 @@
     <%= f.label :rating ,"Rating:",class: "col-md-2" %>
     <%= f.text_field :rating %>
     </div>
+    
+    <span class="picture">
+     <%= f.file_field :image,  accept: "image/jpeg, image/jpg, image/gif, image/png"%>
+     </span>
 
-   <%= f.submit(@movie.new_record? ? 'Create Review': 'Edit Review' , class: "col-md-2 col-md-offset-2 btn btn-success")%>
+   <%=f.submit(@movie.new_record? ? 'Create Review' : 'Edit Review' , class: "col-md-2  col-md-offset-2 btn btn-success") %>
     
      <%end%>
    </div>

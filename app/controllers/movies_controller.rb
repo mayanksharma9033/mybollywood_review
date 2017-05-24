@@ -14,11 +14,13 @@ class MoviesController < ApplicationController
 
 def create
 	@movie=Movie.new(movie_params)
-
+   @movie.user=User.find(1)
+   
     if @movie.save
-    redirect_to movies_path
+    flash[:sucess]="Your Review was Created Successfully"
+    redirect_to  movies_path
     else
-   	render 'new'
+   	render :new
   end
 end
 
@@ -46,7 +48,7 @@ end
 private
 
 def movie_params
-	params.require(:movie).permit(:movie_name,:description,:movie_length,:director_name,:rating)
+	params.require(:movie).permit(:movie_name,:description,:movie_length,:director_name,:rating,:image)
 end
 
 end

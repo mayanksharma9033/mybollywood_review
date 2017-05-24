@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/pages', to:'pages#home'
 
-  resources  :movies
-  
+  resources  :movies do
+  	resources :reviews
+  end 
 end
