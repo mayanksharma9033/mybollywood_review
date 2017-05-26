@@ -6,6 +6,12 @@
     <%= f.label :rating ,"Rating:", class: "col-md-2" %>
     <%= f.text_field :rating %>
     </div>
+
+    <div class="field">
+    <%= f.label :comment ,"Rating:", class: "col-md-2" %>
+    <%= f.text_area :comment , rows: 5%>
+    </div>
+
     <br/>
 
    <%=f.submit 'Create Review' , class: "col-md-2  col-md-offset-2 btn btn-success" %>

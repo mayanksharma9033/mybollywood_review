@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
     create_table :reviews do |t|
       t.integer :rating
 
-      t.timestamps null: false
+      t.timestamps 
     end
   end
 end

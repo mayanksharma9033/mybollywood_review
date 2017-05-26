@@ -5,13 +5,11 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-2 well">
 		<h2><%=link_to movie.movie_name, movie_path(movie) %></h2>
-		<p><%=movie.description %></p>
 		<p><%=movie.movie_length %></p>
-		<p><%=movie.director_name %></p>
-		<p><%=movie.rating %></p>
+		<p><strong>Director:</strong>  <%=movie.director_name %></p>
 	</div>
 	<div class="col-md-4">
-		<%=image_tag(movie.image.url, size:"250x220", class: "avatar") if movie.image? %>
+		<%=image_tag(movie.image.url, size:"200x160", class: "avatar") if movie.image? %>
 	</div>
 </div>
 <%end%>
