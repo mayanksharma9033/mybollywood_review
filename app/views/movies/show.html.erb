@@ -11,15 +11,16 @@
         <P><b>Movie Length:</b>   <%=@movie.movie_length %></P>
         <p><b>Director:</b>       <%=@movie.director_name %></p>
         </div>
-        <div class="show_movie">
-        <%=image_tag(@movie.image_url(:thumb).to_s, class: "avatar") if @movie.image? %>
-        </div>
-        
+        <%=render @movie.reviews %>
         <div>
         <%= link_to "Add Review" , new_movie_review_path(@movie) %>
         </div>
         <br/>
         <h5><%=link_to 'Return to Movie List',movies_path, class: "btn btn-warning btn-small" %></h5>
+    </div>
+
+  <div class="col-md-4">
+    <%=image_tag(@movie.image_url,size:"250x180", class: "avatar") if @movie.image? %>
     </div>
     
 </div>
